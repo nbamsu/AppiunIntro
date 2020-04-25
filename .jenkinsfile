@@ -13,27 +13,27 @@ PIPELINE{
 						}
 				}
 				stage ('Unit Test'){
-						step{
+						steps{
 								bat echo "run unit tests"
 						}
 				}
 				stage ('Deploy to test'){
-						step{
+						steps{
 								bat echo "executing deploy  to test"
 						}
 				}
 				stage ('Regresion test'){
-						step{
+						steps{
 								bat echo "executing Regression test"
 						}
 				}
 				stage ('Deploy to STG'){
-						step{
+						steps{
 								bat echo "executing Deploy to STG"
 						}
 				}
 				stage('Release'){
-						step{
+						steps{
 								bat echo "executing Release"
 						}
 				}
