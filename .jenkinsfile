@@ -1,0 +1,43 @@
+PIPELINE{
+	agent any
+	stages {
+		stage ("Build") {
+			steps {
+					bat echo "executing Build job"
+
+					}
+				}
+				stage ('Deploy to DEV'){
+						steps{
+								bat echo "executing Deploy to Dev"
+						}
+				}
+				stage ('Unit Test'){
+						step{
+								bat echo "run unit tests"
+						}
+				}
+				stage ('Deploy to test'){
+						step{
+								bat echo "executing deploy  to test"
+						}
+				}
+				stage ('Regresion test'){
+						step{
+								bat echo "executing Regression test"
+						}
+				}
+				stage ('Deploy to STG'){
+						step{
+								bat echo "executing Deploy to STG"
+						}
+				}
+				stage('Release'){
+						step{
+								bat echo "executing Release"
+						}
+				}
+
+			}
+
+}
